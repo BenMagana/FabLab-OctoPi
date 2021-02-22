@@ -1,5 +1,6 @@
 # FabLab-OctoPi
 Octopi setup and configuration
+
 *note - this configuration was for a RPi 3B. RPi 4s may require additional configuration.
 
 ## Required Hardware
@@ -13,10 +14,12 @@ Octopi setup and configuration
 
 ### Additional Modifications
 
-* [Filament Spool Holder (needs bearings)](https://www.thingiverse.com/thing:1832235)
-* [PINDA Height Calibration Tool](https://www.thingiverse.com/thing:1977997)
-* [Display Cover](https://www.thingiverse.com/thing:2933252)
-* [Tool Holder](https://www.thingiverse.com/thing:3268830)
+* [Filament Spool Holder (print)](https://www.thingiverse.com/thing:1832235)
+* [Spool Holder Bearings (buy)](https://www.amazon.com/gp/product/B07216D1SZ/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
+* [PINDA Height Calibration Tool (print)](https://www.thingiverse.com/thing:1977997)
+* [Display Cover (print)](https://www.thingiverse.com/thing:2933252)
+* [Tool Holder (print)](https://www.thingiverse.com/thing:3268830)
+* [Silicone Sock (buy)](https://www.amazon.com/gp/product/B07779TP4S/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 
 ## Basic Setup
 ### Download OctoPi
@@ -103,3 +106,13 @@ Configure file at /etc/ssmtp/ssmtp.conf with email info
 ##Prusa MK3S Configuration
 
 ![alt text](https://github.com/BenMagana/FabLab-OctoPi/blob/main/img/Mk3S_Config.png?raw=true)
+
+## PID Calibration
+
+If using an E3D silicone sock, you'll need to update the PID for the heating element. Run the command, substituting the temperature in the third value for whatever temperature that printer will print at. Example is for PETG - 250C
+
+`M303 E0 S250 C8`
+
+Once complete, enter the PID values using the M301 command. 
+
+`M301 P13.69 I1.16 D40.40`
