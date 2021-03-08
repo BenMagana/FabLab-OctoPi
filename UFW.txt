@@ -1,0 +1,10 @@
+#UFW status verbose
+
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere
+3389                       ALLOW       Anywhere
+80                         ALLOW       Anywhere
+443                        ALLOW       Anywhere

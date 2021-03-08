@@ -1,0 +1,18 @@
+# /etc/systemd/system/ufw_log.service
+
+[Unit]
+Description=UFW SMPT Log
+Wants=network-online.target
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/ufw_log.sh
+ExecStop=/usr/bin/killall -9 ufw_log
+ExecStop=/usr/bin/killall ufw_log
+Restart=always
+RestartSec=10
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
