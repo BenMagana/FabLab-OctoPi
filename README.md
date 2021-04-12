@@ -8,7 +8,7 @@ Octopi setup and configuration
 * [USB-C Power Supply](https://www.digikey.com/en/products/detail/rasperry/pi/RPI-USB-C-POWER-SUPPLY-BLACK-US/10258759)
 * You can power the RPi by connecting headers to the Einsy board, but a dedicated power supply is more reliable
 * ~16GB Micro SD Card
-* [RPi Case](https://www.thingiverse.com/thing:4825996) *Updated version coming soon!*
+* [RPi Case](https://www.thingiverse.com/thing:4825996)
 * Ethernet cable
 * USB cable
 
